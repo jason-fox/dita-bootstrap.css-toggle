@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-model href="dita-ot/plugin.rnc" type="application/relax-ng-compact-syntax"?>
+<!--
+  This file is part of the DITA Bootstrap CSS Toggler plug-in for DITA Open Toolkit.
+  See the accompanying LICENSE file for applicable licenses.
+-->
+<plugin id="net.infotexture.dita-bootstrap.css-toggle" version="1.0.0">
+  <require plugin="net.infotexture.dita-bootstrap" />
+  <feature extension="ant.import" file="add_toggle.xml" />
+  <feature extension="dita.xsl.html5" value="xsl/xhtml.xsl" type="file"/>
+  <feature extension="bootstrap.process.pre" value="css-toggle.init"/>
+  <feature extension="depend.preprocess.copy-html.pre" value="css-toggle"/>
+  <feature extension="dita.conductor.html5.param" file="insertParameters.xml"/>
+  <transtype
+    name="html5-bootstrap"
+    extends="html5"
+    desc="HTML5 with Bootstrap style"
+  >
+   <param
+      name="css.theme.toggle"
+      desc="Specifies whether to include a css theme toggle"
+      type="enum"
+    >
+      <val>yes</val>
+      <val default="true">no</val>
+    </param>
+	</transtype>
+</plugin>

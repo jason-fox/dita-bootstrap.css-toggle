@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--ant-->
+<!--
+  This file is part of the DITA Bootstrap Custom CSS plug-in for DITA Open Toolkit.
+  See the accompanying LICENSE file for applicable licenses.
+-->
+<project
+  name="dita.plugin.net.infotexture.dita-bootstrap.css-toggle"
+  xmlns:if="ant:if"
+>
+  
+  <target name="css-toggle" if="css-toggle.copy.js">
+    <!-- Add dark mode initialization script -->
+    <mkdir dir="${dita.output.dir}/js"/>
+    <copy todir="${dita.output.dir}/js">
+      <fileset
+        dir="${dita.plugin.net.infotexture.dita-bootstrap.css-toggle.dir}/resource"
+        includes="css-theme-toggler.js"
+      />
+    </copy>
+  </target>
+
+  <target name="css-toggle.init" >
+    <property name="css.theme.toggle" value="no"/>
+    <condition property="css-toggle.copy.js">
+      <equals arg1="${css.theme.toggle}" arg2="yes"/>
+    </condition>
+  </target>
+
+</project>
