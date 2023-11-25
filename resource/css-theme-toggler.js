@@ -28,16 +28,37 @@
   }
 
   const showActiveCss = (css, focus = false) => {
+    const themeSwitcher = document.querySelector('#bd-css-theme');
+
+    if (!themeSwitcher) {
+      return;
+    }
+
+    const activeThemeIcon = document.querySelector('.theme-icon-active use');
+    const btnToActive = document.querySelector(`[data-bs-css-href="${css}"]`);
+
+    document.querySelectorAll('[data-bs-css-href]').forEach(element => {
+      element.classList.remove('active');
+      element.setAttribute('aria-pressed', 'false');
+    });
+
+    btnToActive.classList.add('active');
+    btnToActive.setAttribute('aria-pressed', 'true');
+
+    if (focus) {
+      themeSwitcher.focus();
+    }
   };
 
   window.addEventListener('DOMContentLoaded', () => {    
     setCss( getStoredCss());
+    showActiveCss(getStoredCss());
     document.querySelectorAll('[data-bs-css-href]').forEach(toggle => {
       toggle.addEventListener('click', () => {
         const css = toggle.getAttribute('data-bs-css-href');
         setStoredCss(css);
         setCss(css);
-        //showActiveCss(css, true);
+        showActiveCss(css, true);
       });
     });
   });
