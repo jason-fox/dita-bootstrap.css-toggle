@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!--ant-->
 <!--
-  This file is part of the DITA Bootstrap Custom CSS plug-in for DITA Open Toolkit.
+  This file is part of the DITA Bootstrap CSS Toggler plug-in for DITA Open Toolkit.
   See the accompanying LICENSE file for applicable licenses.
 -->
 <project
@@ -10,7 +10,7 @@
 >
   
   <target name="css-toggle" if="css-toggle.copy.js">
-    <!-- Add dark mode initialization script -->
+    <!-- Add css theme initialization script -->
     <mkdir dir="${dita.output.dir}/js"/>
     <copy todir="${dita.output.dir}/js">
       <fileset
