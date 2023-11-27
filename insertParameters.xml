@@ -1,7 +1,7 @@
 <dummy xmlns:if="ant:if" xmlns:unless="ant:unless">
 	<param
-    	name="BOOTSTRAP_THEME_TOGGLER_INCLUDE"
-    	expression="${css.theme.toggle}"
-    	if:set="css.theme.toggle"
+    	name="CSS_THEME_SWITCHER_INCLUDE"
+    	expression="${css.theme.switcher}"
+    	if:set="css.theme.switcher"
     />
 </dummy>

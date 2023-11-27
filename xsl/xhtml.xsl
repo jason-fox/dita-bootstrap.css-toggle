@@ -12,7 +12,7 @@
   exclude-result-prefixes="xs dita-ot"
 >
   <!-- Whether to include CSS them toggling.  values are 'yes' or 'no' -->
-  <xsl:param name="BOOTSTRAP_THEME_TOGGLER_INCLUDE" select="'no'"/>
+  <xsl:param name="CSS_THEME_SWITCHER_INCLUDE" select="'no'"/>
 
 
   <xsl:template match="/ | @* | node()" mode="processHDF">
@@ -27,8 +27,8 @@
       </xsl:choose>
     </xsl:variable>
 
-    <xsl:if test="$BOOTSTRAP_THEME_TOGGLER_INCLUDE = 'yes'">
-      <script language="javascript" src="{$relpath}/js/css-theme-toggler.js"/>
+    <xsl:if test="$CSS_THEME_SWITCHER_INCLUDE = 'yes'">
+      <script language="javascript" src="{$relpath}/js/css-theme-switcher.js"/>
     </xsl:if>
 
     <xsl:next-match/>

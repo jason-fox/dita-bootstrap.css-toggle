@@ -1,8 +1,8 @@
-# DITA Bootstrap CSS Toggler
+# DITA Bootstrap CSS Theme Switcher
 
 <a href="https://www.dita-ot.org"><img src="https://www.dita-ot.org/images/dita-ot-logo.svg" align="right" height="55"></a>
 
-_DITA Bootstrap CSS Toggler_ is a [DITA Open Toolkit plug-in](https://www.dita-ot.org/plugins) that extends the [DITA Bootstrap](https://infotexture.github.io/dita-bootstrap/) HTML output to add a switch mechanism for the CSS
+_DITA Bootstrap CSS Theme Switcher_ is a [DITA Open Toolkit plug-in](https://www.dita-ot.org/plugins) that extends the [DITA Bootstrap](https://infotexture.github.io/dita-bootstrap/) HTML output to add a switch mechanism for the CSS theme.
 
 <!-- MarkdownTOC levels="2,3" -->
 
@@ -16,7 +16,7 @@ _DITA Bootstrap CSS Toggler_ is a [DITA Open Toolkit plug-in](https://www.dita-o
 
 ## Installation
 
-The _DITA Bootstrap CSS Toggler_ plug-in has been tested with [DITA-OT 4.x](http://www.dita-ot.org/download). Use the latest version for best results.
+The _DITA Bootstrap CSS Theme Switcher_ plug-in has been tested with [DITA-OT 4.x](http://www.dita-ot.org/download). Use the latest version for best results.
 
 ### Installing DITA-OT
 
@@ -36,7 +36,7 @@ See the [DITA-OT documentation](https://www.dita-ot.org/4.0/topics/installing-cl
 ```console
 dita install https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
 dita install https://github.com/infotexture/dita-bootstrap/archive/master.zip
-dita install https://github.com/infotexture/dita-bootstrap.css-toggler/archive/master.zip
+dita install https://github.com/jason-fox/jason.fox.theme-switcher/archive/master.zip
 ```
 
 ## Usage
@@ -58,11 +58,11 @@ with a `data-bs-css-href` attribute as shown. `data-bs-css-href` holds the link 
 ```
 
 
-To run, use the `html5-bootstrap` transformation and add the `css.theme.toggle` parameter.
+To run, use the `html5-bootstrap` transformation and add the `css.theme.switcher` parameter.
 
 ```console
 PATH_TO_DITA_OT/bin/dita -f html5-bootstrap -o out -i PATH_TO_DITAMAP \
-  --css.theme.toggle=yes
+  --css.theme.switcher=yes
 ```
 
 

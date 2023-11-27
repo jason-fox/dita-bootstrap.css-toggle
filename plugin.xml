@@ -4,12 +4,12 @@
   This file is part of the DITA Bootstrap CSS Toggler plug-in for DITA Open Toolkit.
   See the accompanying LICENSE file for applicable licenses.
 -->
-<plugin id="net.infotexture.dita-bootstrap.css-toggle" version="1.0.0">
+<plugin id="fox.jason.theme-switcher" version="1.0.0">
   <require plugin="net.infotexture.dita-bootstrap" />
-  <feature extension="ant.import" file="add_toggle.xml" />
+  <feature extension="ant.import" file="theme_switcher.xml" />
   <feature extension="dita.xsl.html5" value="xsl/xhtml.xsl" type="file"/>
-  <feature extension="bootstrap.process.pre" value="css-toggle.init"/>
-  <feature extension="depend.preprocess.copy-html.pre" value="css-toggle"/>
+  <feature extension="bootstrap.process.pre" value="theme-switcher.init"/>
+  <feature extension="depend.preprocess.copy-html.pre" value="theme-switcher"/>
   <feature extension="dita.conductor.html5.param" file="insertParameters.xml"/>
   <transtype
     name="html5-bootstrap"
@@ -17,8 +17,8 @@
     desc="HTML5 with Bootstrap style"
   >
    <param
-      name="css.theme.toggle"
-      desc="Specifies whether to include a css theme toggle"
+      name="css.theme.switcher"
+      desc="Specifies whether to include a css theme switcher"
       type="enum"
     >
       <val>yes</val>

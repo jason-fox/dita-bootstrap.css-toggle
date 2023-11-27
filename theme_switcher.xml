@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--ant-->
+<!--
+  This file is part of the DITA Bootstrap CSS Theme Switcher plug-in for DITA Open Toolkit.
+  See the accompanying LICENSE file for applicable licenses.
+-->
+<project
+  name="dita.plugin.fox.jason.theme-switcher"
+  xmlns:if="ant:if"
+>
+  
+  <target name="theme-switcher" if="theme-switcher.copy.js">
+    <!-- Add css theme switcher script -->
+    <mkdir dir="${dita.output.dir}/js"/>
+    <copy todir="${dita.output.dir}/js">
+      <fileset
+        dir="${dita.plugin.fox.jason.theme-switcher.dir}/resource"
+        includes="css-theme-switcher.js"
+      />
+    </copy>
+  </target>
+
+  <target name="theme-switcher.init" >
+    <property name="css.theme.switcher" value="no"/>
+    <condition property="theme-switcher.copy.js">
+      <equals arg1="${css.theme.switcher}" arg2="yes"/>
+    </condition>
+  </target>
+
+</project>

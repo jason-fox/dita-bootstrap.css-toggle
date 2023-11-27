@@ -42,8 +42,10 @@
       element.setAttribute('aria-pressed', 'false');
     });
 
-    btnToActive.classList.add('active');
-    btnToActive.setAttribute('aria-pressed', 'true');
+    if (btnToActive) {
+      btnToActive.classList.add('active');
+      btnToActive.setAttribute('aria-pressed', 'true');
+    }
 
     if (focus) {
       themeSwitcher.focus();
