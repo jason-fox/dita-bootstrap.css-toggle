@@ -19,7 +19,6 @@
   const linkRegex = (regex) => {
     let output = [];
     for (let i of document.querySelectorAll('link')) {
-        console.log(i)
         if (regex.test(i.href)) {
             output.push(i);
         }
