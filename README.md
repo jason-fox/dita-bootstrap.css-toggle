@@ -29,6 +29,12 @@ The _DITA Bootstrap CSS Theme Switcher_ plug-in has been tested with [DITA-OT 4.
 
 See the [DITA-OT documentation](https://www.dita-ot.org/4.0/topics/installing-client.html) for detailed installation instructions.
 
+```console
+curl -LO https://github.com/dita-ot/dita-ot/releases/download/4.2/dita-ot-4.2.zip
+unzip -q dita-ot-4.2.zip
+rm dita-ot-4.2.zip
+```
+
 ### Installing the Plug-in
 
 - Run the plug-in installation commands:
@@ -68,5 +74,5 @@ PATH_TO_DITA_OT/bin/dita -f html5-bootstrap -o out -i PATH_TO_DITAMAP \
 
 ## License
 
-[Apache 2.0](LICENSE) © 2023 Jason Fox
+[Apache 2.0](LICENSE) © 2023 - 2024 Jason Fox
 
