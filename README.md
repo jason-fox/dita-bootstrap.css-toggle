@@ -2,6 +2,9 @@
 
 <a href="https://www.dita-ot.org"><img src="https://www.dita-ot.org/images/dita-ot-logo.svg" align="right" height="55"></a>
 
+[![license](https://img.shields.io/github/license/jason-fox/fox.jason.theme-switcher.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+[![DITA-OT 4.2](https://img.shields.io/badge/DITA--OT-4.2-green.svg)](http://www.dita-ot.org/4.2)
+
 _DITA Bootstrap CSS Theme Switcher_ is a [DITA Open Toolkit plug-in](https://www.dita-ot.org/plugins) that extends the [DITA Bootstrap](https://infotexture.github.io/dita-bootstrap/) HTML output to add a switch mechanism for the CSS theme.
 
 <!-- MarkdownTOC levels="2,3" -->
@@ -56,7 +59,7 @@ with a `data-bs-css-href` attribute as shown. `data-bs-css-href` holds the link 
   <button
     type="button"
     class="dropdown-item d-flex align-items-center"
-    data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/zephyr/bootstrap.min.css"
+    data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/zephyr/bootstrap.min.css"
   >
     Zephyr
   </button>
